@@ -28,3 +28,15 @@ links.forEach(function(link){
 //Recorrerlos
 //Agregar un evento click a cada uno de ellos
 
+let links = document.querySelectorAll("a");
+links.forEach(function(link){
+    link.addEventListener("click",function(ev){
+        ev.preventDefault();
+
+        setTimeout(function(){
+            location.href="/boletines";
+        },600);
+        return false;
+
+    });
+});
